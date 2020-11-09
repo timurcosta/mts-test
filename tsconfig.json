@@ -11,6 +11,16 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "paths": {
+      "@actions/*": ["src/app/core/actions/*"],
+      "@state/*": ["src/app/core/state/*"],
+      "@home/*": ["src/app/home/*"],
+      "@services/*": ["src/app/core/services/*"],
+      "@interceptors/*": ["src/app/core/interceptors/*"],
+      "@core/*": ["src/app/core/*"],
+      "@paths/*": ["src/app/core/paths/*"],
+      "@env/*": ["src/environments/*"],
+    },
     "lib": [
       "es2018",
       "dom"
