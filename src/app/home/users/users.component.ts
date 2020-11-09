@@ -98,7 +98,7 @@ export class UsersComponent implements OnInit {
     this.store.dispatch(new GetUsers());
   }
 
-  dataSourceLoad(usersData: IUser[], filterValue?: string, sortType?: string) {
+  dataSourceLoad(usersData: IUser[], filterValue?: string) {
     if (filterValue) {
       usersData = usersData.filter((x) => x.company.name === filterValue);
     }
