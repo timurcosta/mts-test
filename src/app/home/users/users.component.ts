@@ -1,15 +1,14 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Select, Store } from '@ngxs/store';
+import { Navigate } from '@ngxs/router-plugin';
+import { GetUsers } from '@actions/users.action';
+import { IAddress, IUser, UsersState, IUsersModel } from '@state/users.state';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { GetUsers } from '@actions/users.action';
-import { IAddress, IUser, UsersState } from '@state/users.state';
-import { IUsersModel } from '@state/users.state';
-import { filter } from 'rxjs/operators';
 import { MatSelectChange } from '@angular/material/select';
-import { Navigate } from '@ngxs/router-plugin';
+import { filter } from 'rxjs/operators';
 
 interface ISortType {
   id: string;

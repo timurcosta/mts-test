@@ -33,6 +33,8 @@ export class TodosState {
 
   @Action(GetTodos)
   GetTodos({ patchState }: StateContext<ITodosModel>, { payload }) {
-    this.data.getTodos(payload).subscribe((res) => patchState({ Todos: res }));
+    this.data
+      .getTodos(payload)
+      .subscribe((res: ITodo[]) => patchState({ Todos: res }));
   }
 }

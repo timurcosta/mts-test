@@ -60,11 +60,15 @@ export class UsersState {
 
   @Action(GetUsers)
   GetUsers({ patchState }: StateContext<IUsersModel>) {
-    this.data.getUsers().subscribe((res) => patchState({ Users: res }));
+    this.data
+      .getUsers()
+      .subscribe((res: IUser[]) => patchState({ Users: res }));
   }
 
   @Action(GetUser)
   GetUser({ patchState }: StateContext<IUsersModel>, { payload }) {
-    this.data.getUser(payload).subscribe((res) => patchState({ User: res }));
+    this.data
+      .getUser(payload)
+      .subscribe((res: IUser) => patchState({ User: res }));
   }
 }
